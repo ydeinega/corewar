@@ -35,6 +35,8 @@
 **			"Number argument is needed after -n",
 **	3		"number argument must be in the range from 1 to 4",
 **	4		"champion is missing",
+**	5		"champions cannot have same numbers",
+**	6		"too many players. Max number of champions is 4"
 **	};
 */
 
@@ -57,7 +59,9 @@ char	*g_error[10] =
 	"argument number is invalid or missing\n"
 	"Number argument is needed after -n",
 	"number argument must be in the range from 1 to 4",
-	"champion is missing"
+	"champion is missing",
+	"champions cannot have same numbers",
+	"too many players. Max number of champions is 4"
 };
 
 void	usage(void)
@@ -72,6 +76,7 @@ void	usage(void)
 
 void	error(int num)
 {
+	//clear_game
 	ft_printf("ERROR");
 	if (num >= 0)
 		ft_printf(": %s", g_error[num]);

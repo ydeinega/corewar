@@ -24,7 +24,7 @@ typedef struct			s_process
 	int					player;
 }						t_process;
 
-typedef	struct		s_player
+typedef	struct			s_player
 {
 	char				*name;
 	char				*comment;
@@ -34,11 +34,11 @@ typedef	struct		s_player
 	int					lives_in_curr;
 }						t_player;
 
-typedef struct		s_lst_champs
+typedef struct			s_lst_champs
 {
 	int					num;
-	int					num_flag;
-	char				*file_name;
+	bool				n_flag;
+	char				*file_name;//no malloc
 	int					fd;
 	char				*file_cont;
 	unsigned int		file_size;
@@ -46,8 +46,8 @@ typedef struct		s_lst_champs
 	char				*name;
 	char				*comment;
 	char				*instruct;
-	struct s_lst_champs	*next;
-}					t_lst_champs;
+	struct s_lst_champs	*next;//no malloc
+}						t_lst_champs;
 
 typedef	struct			s_parse
 {
@@ -63,7 +63,7 @@ void					usage(void);
 void					error(int num);
 void					parse_args(int argc, char **argv);
 void					validate_dump(int argc, char **argv, int *i);
-void					validate_champ(int argc, char **argv, int *i, int *prev);
+void					validate_champ(int argc, char **argv, int *i);
 // void					validate_visu(int argc, char **argv, int *i);
 bool					validate_num(char *str);
 bool					check_if_int(char *str);
