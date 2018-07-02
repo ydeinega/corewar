@@ -47,15 +47,20 @@ void			add_champ(t_lst_champs **head, t_lst_champs *new)
 	}
 }
 
-void			set_positions(void)
+void			set_blank_positions(void)
 {
 	t_lst_champs		*tmp;
+	int					num;
 
 	tmp = g_game.champ;
+	num = g_game.players;
 	while (tmp)
 	{
 		if (tmp->n_flag == false)
-			champ_position(tmp, MAX_PLAYERS);//op.h
+		{
+			champ_position(tmp, num);//op.h
+			num = tmp->num - 1;
+		}
 		tmp = tmp->next;
 	}
 }

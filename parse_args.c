@@ -87,7 +87,14 @@ void	parse_args(int argc, char **argv)
 	}
 	if (!g_game.players)
 		error(4);
-	set_positions();
+	set_blank_positions();
+	check_positions();
+	//вопрос нумерации остается открытым
+	//проверить пропуски в нумерации. Не может быть 2 аргумента с нумерацией 1 и 3
+	//проверить пропуски можно 2-мя способами
+	// 1 - это на этапе создания массива
+	// 2 - это сортировка элементов и итерация
+
 	ft_printf("Players\n");
 	t_lst_champs *tmp = g_game.champ;
 	while (tmp)
@@ -95,7 +102,6 @@ void	parse_args(int argc, char **argv)
 		ft_printf("file = %s num = %d\n", tmp->file_name, tmp->num);
 		tmp = tmp->next;
 	}
-	//после парсинга аргументов проверить кол-во чемпионов
 	//если ни визу, ни дамп не включены что делать? - просто пишем кто победил и все?
 	//проверить одневременную включенность визу и дампа
 }

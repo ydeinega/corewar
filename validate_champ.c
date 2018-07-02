@@ -25,8 +25,6 @@ void	validate_champ(int argc, char **argv, int *i)
 	{
 		new = num > 0 ? new_champ(argv[*i], num, true) :
 		new_champ(argv[*i], num, false);
-		// if (!num)
-		// 	champ_position(new, 1);
 		add_champ(&(g_game.champ), new);
 		g_game.players += 1;
 		//возможно, здесь нужно валидировать имя программы
@@ -75,8 +73,6 @@ void	check_double_positions(int num)
 	{
 		if (tmp->num == num && tmp->n_flag == true)
 			error(5);
-		// else if (tmp->num == num && tmp->n_flag == false)
-		// 	champ_position(tmp, 1);
 		tmp = tmp->next;
 	}
 }
@@ -100,4 +96,41 @@ void	champ_position(t_lst_champs *champ, int num)
 		check = 0;
 	}
 	champ->num = num;
+}
+
+void	check_positions(void)
+{
+	t_lst_champs	*tmp;
+	t_lst_champs	*swap;
+	t_lst_champs	*prev;
+	int				check;
+
+	tmp = g_game.champ;
+	swap = NULL;
+	prev = NULL;
+	check = -1;
+	if (tmp->next == NULL && tmp->num != 1)
+		error(2);
+	while (check != 0)
+	{
+		check = 0;
+		while (tmp->next)
+		{
+			if (tmp->num > tmp->next->num)
+			{
+				swap = tmp->next;
+				tmp->next = swap->next;
+				swap->next = tmp;
+				tmp = swap;
+				if (prev)
+					prev->next = swap;
+				else
+					g_game.champ = swap;
+				check++;
+			}
+			prev = tmp;
+			tmp = tmp->next;
+		}
+		tmp = g_game.champ;
+	}
 }
