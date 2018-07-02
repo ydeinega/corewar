@@ -25,9 +25,9 @@ void	validate_champ(int argc, char **argv, int *i)
 	{
 		new = num > 0 ? new_champ(argv[*i], num, true) :
 		new_champ(argv[*i], num, false);
-		if (!num)
-			champ_position(new, 1);
-		add_champ(&(g_game->champ), new);
+		// if (!num)
+		// 	champ_position(new, 1);
+		add_champ(&(g_game.champ), new);
 		g_game.players += 1;
 		//возможно, здесь нужно валидировать имя программы
 		//в хедер файле задефайнены макс размеры програм_нейм, коммента и мэджик намбер ПОТЕСТИТЬ
@@ -61,12 +61,12 @@ int		validate_champ_num(int argc, char **argv, int *i)
 		else	
 			error(2);
 	}
-	!num || num > 4 ? error(3) : 0;
-	g_game.champ ? check_champ_positions(num);
+	!num || num > MAX_PLAYERS ? error(3) : 0;//использую дефайн из op.h
+	g_game.champ ? check_double_positions(num) : 0;
 	return (num);
 }
 
-void	check_champ_positions(int num)
+void	check_double_positions(int num)
 {
 	t_lst_champs	*tmp;
 
@@ -75,22 +75,29 @@ void	check_champ_positions(int num)
 	{
 		if (tmp->num == num && tmp->n_flag == true)
 			error(5);
-		else if (tmp->num == num && tmp->n_flag == false)
-			champ_position(tmp, 1);
+		// else if (tmp->num == num && tmp->n_flag == false)
+		// 	champ_position(tmp, 1);
 		tmp = tmp->next;
 	}
 }
 
-void	champ_position(t_lst_champs champ, int num)
+//Все еще вопрос, как нумеровать чемпионов??? от 1 до 4 или от 4 до 1-го???
+void	champ_position(t_lst_champs *champ, int num)
 {
 	t_lst_champs	*tmp;
+	int				check;
 
+	check = 0;
 	tmp = g_game.champ;
 	while (tmp)
 	{
 		if (tmp->num == num)
-			change_champ_position(tmp, num + 1);
-		tmp = tmp->next;
+		{
+			check++;
+			num--;
+		}
+		tmp = !check ? tmp->next : g_game.champ;
+		check = 0;
 	}
 	champ->num = num;
 }

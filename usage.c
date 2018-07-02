@@ -33,10 +33,10 @@
 **			"Nbr_cycles argument is needed after -dump",
 **	2		"argument number is invalid or missing\n"
 **			"Number argument is needed after -n",
-**	3		"number argument must be in the range from 1 to 4",
+**	3		"number argument must be in the range from 1 to (MAX_PLAYERS)",
 **	4		"champion is missing",
 **	5		"champions cannot have same numbers",
-**	6		"too many players. Max number of champions is 4"
+**	6		"too many players. Max number of champions is (MAX_PLAYERS)"
 **	};
 */
 
@@ -58,10 +58,10 @@ char	*g_error[10] =
 	"Nbr_cycles argument is needed after -dump",
 	"argument number is invalid or missing\n"
 	"Number argument is needed after -n",
-	"number argument must be in the range from 1 to 4",
+	"number argument must be in the range from 1 to ",
 	"champion is missing",
 	"champions cannot have same numbers",
-	"too many players. Max number of champions is 4"
+	"too many players. Max number of champions is "
 };
 
 void	usage(void)
@@ -80,6 +80,8 @@ void	error(int num)
 	ft_printf("ERROR");
 	if (num >= 0)
 		ft_printf(": %s", g_error[num]);
+	if (num == 6 || num == 3)
+		ft_printf("%d", MAX_PLAYERS);
 	ft_printf("\n");
 	exit(1);
 }

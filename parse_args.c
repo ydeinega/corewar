@@ -78,12 +78,22 @@ void	parse_args(int argc, char **argv)
 			g_game.visu = true;
 		else if (ft_strequ(argv[i], "-n") || ft_strstr(argv[i], ".cor"))
 		{
-			g_game.players == 4 ? error(6) : 0;
+			g_game.players == MAX_PLAYERS ? error(6) : 0;//op.h
 			validate_champ(argc, argv, &i);
 		}
 		else
 			error(0);
 		i++;
+	}
+	if (!g_game.players)
+		error(4);
+	set_positions();
+	ft_printf("Players\n");
+	t_lst_champs *tmp = g_game.champ;
+	while (tmp)
+	{
+		ft_printf("file = %s num = %d\n", tmp->file_name, tmp->num);
+		tmp = tmp->next;
 	}
 	//после парсинга аргументов проверить кол-во чемпионов
 	//если ни визу, ни дамп не включены что делать? - просто пишем кто победил и все?

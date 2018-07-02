@@ -16,7 +16,8 @@ LIB = ./libft/libft.a
 
 FLAGS = -Wall -Wextra -Werror -I. -c
 
-SRCS = main.c usage.c parse_args.c
+SRCS = main.c usage.c parse_args.c validate_champ.c \
+new_champ.c
 
 OBJS = $(SRCS:.c=.o)
 

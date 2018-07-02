@@ -25,15 +25,15 @@ t_lst_champs	*new_champ(char *file_name, int num, bool n_flag)
 	champ->fd = 0;
 	champ->file_cont = NULL;
 	champ->file_size = 0;
-	champ_magic = 0;
-	champ_name = NULL;
-	champ_comment = NULL;
-	champ_instuct = NULL;
+	champ->magic = 0;
+	champ->name = NULL;
+	champ->comment = NULL;
+	champ->instruct = NULL;
 	champ->next = NULL;
 	return (champ);
 }
 
-void			add_champ(t_lst_champs **head, t_lst_champs new)
+void			add_champ(t_lst_champs **head, t_lst_champs *new)
 {
 	if (head && new)
 	{
@@ -44,5 +44,18 @@ void			add_champ(t_lst_champs **head, t_lst_champs new)
 		}
 		else
 			*head = new;
+	}
+}
+
+void			set_positions(void)
+{
+	t_lst_champs		*tmp;
+
+	tmp = g_game.champ;
+	while (tmp)
+	{
+		if (tmp->n_flag == false)
+			champ_position(tmp, MAX_PLAYERS);//op.h
+		tmp = tmp->next;
 	}
 }
