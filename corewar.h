@@ -19,6 +19,14 @@
 extern char			*g_usage[7];
 extern char			*g_error[10];
 
+typedef struct			s_change
+{
+	int					player;
+	unsigned char		value;
+	unsigned int		pos;
+	struct s_change		*next;
+}						t_change;
+
 typedef struct			s_process
 {
 	int					player;
@@ -28,8 +36,9 @@ typedef	struct			s_player
 {
 	char				*name;
 	char				*comment;
+	unsigned char		*comms;
 	int					start;
-	int					length;
+	int					len;
 	int					last_live;
 	int					lives_in_curr;
 }						t_player;
@@ -44,8 +53,8 @@ typedef struct			s_lst_champs
 	unsigned int		file_size;
 	unsigned int		magic;
 	char				*name;
-	char				*comment;
-	char				*instruct;
+	unsigned char		*comment;
+	unsigned char		*comms;//instructions
 	struct s_lst_champs	*next;//no malloc
 }						t_lst_champs;
 
