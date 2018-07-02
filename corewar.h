@@ -63,8 +63,12 @@ void					usage(void);
 void					error(int num);
 void					parse_args(int argc, char **argv);
 void					validate_dump(int argc, char **argv, int *i);
-void					validate_champ(int argc, char **argv, int *i);
-// void					validate_visu(int argc, char **argv, int *i);
 bool					validate_num(char *str);
 bool					check_if_int(char *str);
+void					validate_champ(int argc, char **argv, int *i);
+int						validate_champ_num(int argc, char **argv, int *i);
+void					check_champ_positions(int num);
+void					champ_position(t_lst_champs champ, int num);
+t_lst_champs			*new_champ(char *file_name, int num, bool n_flag);
+void					add_champ(t_lst_champs **head, t_lst_champs new);	
 #endif
