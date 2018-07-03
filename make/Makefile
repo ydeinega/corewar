@@ -21,9 +21,12 @@ new_champ.c
 
 OBJS = $(SRCS:.c=.o)
 
-cor:
-	@rm -rf $(NAME)
+all: $(NAME)
+
+$(LIB): 
 	@make -C libft
+
+$(NAME): $(LIB)
 	@gcc $(SRCS) $(FLAGS)
 	@gcc $(OBJS) $(LIB) -o $(NAME)
 	@echo "\x1b[35mYour PROGRAM has been successfully created!\x1b[0m"

@@ -16,12 +16,26 @@
 **	char	*g_usage[7] =
 **	{
 **	0	"Usage: ./corewar",
-**	1	"-dump nbr_cycles",
-**	2	"Dumps memory after nbr_cycles and exits",
-**	3	"-n number",
-**	4	"Sets the number of the next player",
-**	5	"-visu",
-**	6	"Ncurses output mode"
+**	1	"-n number",
+**	2	"Sets the number of the next player",
+**	3	"-a"
+**	4	"Prints output from "aff" (Default is to hide it)"
+**	5	"#### TEXT OUTPUT MODE "
+		"##########################################################"
+**	6	"-dump nbr_cycles",
+**	7	"Dumps memory after nbr_cycles and exits",
+**	8	"-v number",
+**	9	"Verbosity levels, can be added together to enable several",
+**	10	"- 0 : Show only essentials",
+**	11	"- 1 : Show lives",
+**	12	"- 2 : Show cycles",
+**	13	"- 4 : Show operations (Params are NOT litteral ...)",
+**	14	"- 8 : Show deaths",
+**	15	"-16 : Show PC movements (Except for jumps)",
+**	16	"#### NCURSES OUTPUT MODE "
+**		"#######################################################"
+**	17	"-visu"
+**	18	"Ncurses ouptut mode"
 **	}
 */
 
@@ -36,7 +50,8 @@
 **	3		"number argument must be in the range from 1 to (MAX_PLAYERS)",
 **	4		"champion is missing",
 **	5		"champions cannot have same numbers",
-**	6		"too many players. Max number of champions is (MAX_PLAYERS)"
+**	6		"too many players. Max number of champions is (MAX_PLAYERS)",
+**	7		"numbering value inconsistent"
 **	};
 */
 
@@ -61,7 +76,8 @@ char	*g_error[10] =
 	"number argument must be in the range from 1 to ",
 	"champion is missing",
 	"champions cannot have same numbers",
-	"too many players. Max number of champions is "
+	"too many players. Max number of champions is ",
+	"numbering value inconsistent"
 };
 
 void	usage(void)
@@ -76,7 +92,7 @@ void	usage(void)
 
 void	error(int num)
 {
-	//clear_game
+	//clean_game
 	ft_printf("ERROR");
 	if (num >= 0)
 		ft_printf(": %s", g_error[num]);

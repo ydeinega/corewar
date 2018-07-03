@@ -28,7 +28,7 @@ t_lst_champs	*new_champ(char *file_name, int num, bool n_flag)
 	champ->magic = 0;
 	champ->name = NULL;
 	champ->comment = NULL;
-	champ->instruct = NULL;
+	champ->comms = NULL;
 	champ->next = NULL;
 	return (champ);
 }
@@ -61,6 +61,40 @@ void			set_blank_positions(void)
 			champ_position(tmp, num);//op.h
 			num = tmp->num - 1;
 		}
+		tmp = tmp->next;
+	}
+}
+
+//Все еще вопрос, как нумеровать чемпионов??? от 1 до 4 или от 4 до 1-го???
+void	champ_position(t_lst_champs *champ, int num)
+{
+	t_lst_champs	*tmp;
+	int				check;
+
+	check = 0;
+	tmp = g_game.champ;
+	while (tmp)
+	{
+		if (tmp->num == num)
+		{
+			check++;
+			num--;
+		}
+		tmp = !check ? tmp->next : g_game.champ;
+		check = 0;
+	}
+	champ->num = num;
+}
+
+void	check_double_positions(int num)
+{
+	t_lst_champs	*tmp;
+
+	tmp = g_game.champ;
+	while (tmp)
+	{
+		if (tmp->num == num && tmp->n_flag == true)
+			error(5);
 		tmp = tmp->next;
 	}
 }

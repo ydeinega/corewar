@@ -12,7 +12,7 @@
 
 #include "corewar.h"
 
-void	validate_champ(int argc, char **argv, int *i)
+void			validate_champ(int argc, char **argv, int *i)
 {
 	int 			num;
 	t_lst_champs	*new;
@@ -35,7 +35,7 @@ void	validate_champ(int argc, char **argv, int *i)
 
 }
 
-int		validate_champ_num(int argc, char **argv, int *i)
+int				validate_champ_num(int argc, char **argv, int *i)
 {
 	int num;
 
@@ -64,53 +64,35 @@ int		validate_champ_num(int argc, char **argv, int *i)
 	return (num);
 }
 
-void	check_double_positions(int num)
+void			check_positions(void)
 {
+	int 			i;
 	t_lst_champs	*tmp;
 
+	i = 1;
+	tmp = NULL;
+	sort_champs();
 	tmp = g_game.champ;
+	if (tmp->next == NULL && tmp->num != 1)
+		error(7);
 	while (tmp)
 	{
-		if (tmp->num == num && tmp->n_flag == true)
-			error(5);
+		if (tmp->num != i)
+			error(7);
 		tmp = tmp->next;
+		i++;
 	}
 }
 
-//Все еще вопрос, как нумеровать чемпионов??? от 1 до 4 или от 4 до 1-го???
-void	champ_position(t_lst_champs *champ, int num)
+void			sort_champs(void)
 {
 	t_lst_champs	*tmp;
-	int				check;
-
-	check = 0;
-	tmp = g_game.champ;
-	while (tmp)
-	{
-		if (tmp->num == num)
-		{
-			check++;
-			num--;
-		}
-		tmp = !check ? tmp->next : g_game.champ;
-		check = 0;
-	}
-	champ->num = num;
-}
-
-void	check_positions(void)
-{
-	t_lst_champs	*tmp;
-	t_lst_champs	*swap;
 	t_lst_champs	*prev;
 	int				check;
 
 	tmp = g_game.champ;
-	swap = NULL;
 	prev = NULL;
 	check = -1;
-	if (tmp->next == NULL && tmp->num != 1)
-		error(2);
 	while (check != 0)
 	{
 		check = 0;
@@ -118,19 +100,29 @@ void	check_positions(void)
 		{
 			if (tmp->num > tmp->next->num)
 			{
-				swap = tmp->next;
-				tmp->next = swap->next;
-				swap->next = tmp;
-				tmp = swap;
-				if (prev)
-					prev->next = swap;
-				else
-					g_game.champ = swap;
+				tmp = swap_champs(tmp, prev);
 				check++;
 			}
 			prev = tmp;
 			tmp = tmp->next;
 		}
 		tmp = g_game.champ;
+		prev = NULL;
 	}
+}
+
+t_lst_champs	*swap_champs(t_lst_champs *tmp, t_lst_champs *prev)
+{
+	t_lst_champs	*swap;
+
+	swap = NULL;
+	swap = tmp->next;
+	tmp->next = swap->next;
+	swap->next = tmp;
+	tmp = swap;
+	if (prev)
+		prev->next = swap;
+	else
+		g_game.champ = swap;
+	return (tmp);
 }

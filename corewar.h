@@ -82,4 +82,6 @@ t_lst_champs			*new_champ(char *file_name, int num, bool n_flag);
 void					add_champ(t_lst_champs **head, t_lst_champs *new);
 void					set_blank_positions(void);
 void					check_positions(void);
+void					sort_champs(void);
+t_lst_champs			*swap_champs(t_lst_champs *tmp, t_lst_champs *prev);
 #endif
