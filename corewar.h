@@ -16,7 +16,7 @@
 # include "op.h"
 # include "./libft/libft.h"
 
-extern char			*g_usage[7];
+extern char			*g_usage[19];
 extern char			*g_error[10];
 
 typedef struct			s_change

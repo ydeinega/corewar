@@ -21,7 +21,7 @@
 **	3	"-a",
 **	4	"Prints output from "aff" (Default is to hide it)",
 **	5	"#### TEXT OUTPUT MODE "
-		"##########################################################",
+**		"##########################################################",
 **	6	"-dump nbr_cycles",
 **	7	"Dumps memory after nbr_cycles and exits",
 **	8	"-v number",
@@ -34,8 +34,8 @@
 **	15	"-16 : Show PC movements (Except for jumps)",
 **	16	"#### NCURSES OUTPUT MODE "
 **		"#######################################################",
-**	17	"-visu",
-**	18	"Ncurses ouptut mode"
+**	17	"-visu nbr_cycles",
+**	18	"Runs nbr_cycles and then starts ncurses output mode"
 **	}
 */
 
@@ -55,15 +55,29 @@
 **	};
 */
 
-char	*g_usage[7] =
+char	*g_usage[19] =
 {
 	"Usage: ./corewar",
-	"-dump nbr_cycles",
-	"Dumps memory after nbr_cycles and exits",
 	"-n number",
 	"Sets the number of the next player",
-	"-visu",
-	"Ncurses ouptut mode"
+	"-a",
+	"Prints output from \"aff\" (Default is to hide it)",
+	"#### TEXT OUTPUT MODE "
+	"###############################################################",
+	"-dump nbr_cycles",
+	"Dumps memory after nbr_cycles and exits",
+	"-v number",
+	"Verbosity levels, can be added together to enable several",
+	"- 0 : Show only essentials",
+	"- 1 : Show lives",
+	"- 2 : Show cycles",
+	"- 4 : Show operations (Params are NOT litteral ...)",
+	"- 8 : Show deaths",
+	"-16 : Show PC movements (Except for jumps)",
+	"#### NCURSES OUTPUT MODE "
+	"############################################################",
+	"-visu nbr_cycles",
+	"Runs nbr_cycles and then starts ncurses output mode"
 };
 
 char	*g_error[10] =
@@ -82,11 +96,18 @@ char	*g_error[10] =
 
 void	usage(void)
 {
-	ft_printf("%s [%s] [%s] [[%s] champion1.cor] ...\n",
-			g_usage[0], g_usage[1], g_usage[5], g_usage[3]);
-	ft_printf("%5c%-20s: %s\n", ' ', g_usage[1], g_usage[2]);
-	ft_printf("%5c%-20s: %s\n", ' ', g_usage[5], g_usage[6]);
+	ft_printf("%s [%s %s | %s] [%s] [[%s] champion1.cor] ...\n", g_usage[0],
+		g_usage[6], g_usage[8], g_usage[17], g_usage[3], g_usage[1]);
 	ft_printf("%5c%-20s: %s\n", ' ', g_usage[3], g_usage[4]);
+	ft_printf("%5c%-20s: %s\n", ' ', g_usage[1], g_usage[2]);
+	ft_printf("%s\n", g_usage[5]);
+	ft_printf("%5c%-20s: %s\n", ' ', g_usage[6], g_usage[7]);
+	ft_printf("%5c%-20s: %s\n", ' ', g_usage[8], g_usage[9]);
+	ft_printf("%27c%s\n%27c%s\n%27c%s\n%27c%s\n%27c%s\n%27c%s\n",
+		' ', g_usage[10], ' ', g_usage[11], ' ', g_usage[12],
+		' ', g_usage[13], ' ', g_usage[14], ' ', g_usage[15]);
+	ft_printf("%s\n", g_usage[16]);
+	ft_printf("%5c%-20s: %s\n", ' ', g_usage[17], g_usage[18]);
 	exit(1);
 }
 
