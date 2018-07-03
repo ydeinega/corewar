@@ -64,7 +64,10 @@ typedef	struct			s_parse
 	t_lst_champs		*champ;
 	bool				dump;
 	bool				visu;
+	bool				v;
 	int					nbr_cycles;
+	int					nbr_cycles_visu;
+	int					number_v;
 }						t_parse;
 
 t_parse					g_game;
@@ -74,6 +77,8 @@ void					parse_args(int argc, char **argv);
 void					validate_dump(int argc, char **argv, int *i);
 bool					validate_num(char *str);
 bool					check_if_int(char *str);
+void					validate_visu(int argc, char **argv, int *i);
+void					validate_verbal(int argc, char **argv, int *i);
 void					validate_champ(int argc, char **argv, int *i);
 int						validate_champ_num(int argc, char **argv, int *i);
 void					check_double_positions(int num);

@@ -47,11 +47,14 @@
 **			"Nbr_cycles argument is needed after -dump",
 **	2		"argument number is invalid or missing\n"
 **			"Number argument is needed after -n",
-**	3		"number argument must be in the range from 1 to (MAX_PLAYERS)",
+**	3		"number argument (after -v) must be in the range from 1 to (MAX_PLAYERS)",
 **	4		"champion is missing",
 **	5		"champions cannot have same numbers",
 **	6		"too many players. Max number of champions is (MAX_PLAYERS)",
 **	7		"numbering value inconsistent"
+**	8		"argument number is invalid or missing\n"
+**			"Number argument is needed after -v",
+**	9		"number argument (after -v) must be in the range from 0 to 31"
 **	};
 */
 
@@ -87,11 +90,14 @@ char	*g_error[10] =
 	"Nbr_cycles argument is needed after -dump",
 	"argument number is invalid or missing\n"
 	"Number argument is needed after -n",
-	"number argument must be in the range from 1 to ",
+	"number argument (after -n) must be in the range from 1 to ",
 	"champion is missing",
 	"champions cannot have same numbers",
 	"too many players. Max number of champions is ",
-	"numbering value inconsistent"
+	"numbering value inconsistent",
+	"argument number is invalid or missing\n"
+	"Number argument is needed after -v",
+	"number argument (after -v) must be in the range from 0 to 31"
 };
 
 void	usage(void)

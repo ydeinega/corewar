@@ -75,7 +75,9 @@ void	parse_args(int argc, char **argv)
 		if (ft_strequ(argv[i], "-dump"))
 			validate_dump(argc, argv, &i);
 		else if (ft_strequ(argv[i], "-visu"))
-			g_game.visu = true;
+			validate_visu(argc, argv, &i);
+		else if (ft_strequ(argv[i], "-v"))
+			validate_verbal(argc, argv, &i);
 		else if (ft_strequ(argv[i], "-n") || ft_strstr(argv[i], ".cor"))
 		{
 			g_game.players == MAX_PLAYERS ? error(6) : 0;//op.h
@@ -89,13 +91,13 @@ void	parse_args(int argc, char **argv)
 		error(4);
 	set_blank_positions();
 	check_positions();
-	ft_printf("Players 1\n");
-	t_lst_champs *tmp = g_game.champ;
-	while (tmp)
-	{
-		ft_printf("file = %s num = %d\n", tmp->file_name, tmp->num);
-		tmp = tmp->next;
-	}
+	// ft_printf("Players 1\n");
+	// t_lst_champs *tmp = g_game.champ;
+	// while (tmp)
+	// {
+	// 	ft_printf("file = %s num = %d\n", tmp->file_name, tmp->num);
+	// 	tmp = tmp->next;
+	// }
 	//вопрос нумерации остается открытым
 	//если ни визу, ни дамп не включены что делать? - просто пишем кто победил и все?
 	//проверить одневременную включенность визу и дампа
