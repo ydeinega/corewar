@@ -13,15 +13,15 @@
 #include "corewar.h"
 
 /*
-**	char	*g_usage[7] =
+**	char	*g_usage[19] =
 **	{
 **	0	"Usage: ./corewar",
 **	1	"-n number",
 **	2	"Sets the number of the next player",
-**	3	"-a"
-**	4	"Prints output from "aff" (Default is to hide it)"
+**	3	"-a",
+**	4	"Prints output from "aff" (Default is to hide it)",
 **	5	"#### TEXT OUTPUT MODE "
-		"##########################################################"
+		"##########################################################",
 **	6	"-dump nbr_cycles",
 **	7	"Dumps memory after nbr_cycles and exits",
 **	8	"-v number",
@@ -33,8 +33,8 @@
 **	14	"- 8 : Show deaths",
 **	15	"-16 : Show PC movements (Except for jumps)",
 **	16	"#### NCURSES OUTPUT MODE "
-**		"#######################################################"
-**	17	"-visu"
+**		"#######################################################",
+**	17	"-visu",
 **	18	"Ncurses ouptut mode"
 **	}
 */
