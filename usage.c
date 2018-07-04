@@ -120,11 +120,13 @@ void	usage(void)
 void	error(int num)
 {
 	//clean_game
-	ft_printf("ERROR");
 	if (num >= 0)
+	{
+		ft_printf("ERROR");
 		ft_printf(": %s", g_error[num]);
-	if (num == 6 || num == 3)
-		ft_printf("%d", MAX_PLAYERS);
-	ft_printf("\n");
+		if (num == 6 || num == 3)
+			ft_printf("%d", MAX_PLAYERS);
+		ft_printf("\n");
+	}
 	exit(1);
 }

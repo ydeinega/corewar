@@ -33,5 +33,6 @@ int		main(int argc, char **argv)
 	{
 		initialize_game();
 		parse_args(argc, argv);
+		parse_champs();
 	}
 }

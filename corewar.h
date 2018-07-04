@@ -13,6 +13,9 @@
 #ifndef COREWAR_H
 # define COREWAR_H
 # include <stdbool.h>
+# include <errno.h>
+# include <stdio.h>
+# include <fcntl.h>
 # include "op.h"
 # include "./libft/libft.h"
 
@@ -89,4 +92,6 @@ void					set_blank_positions(void);
 void					check_positions(void);
 void					sort_champs(void);
 t_lst_champs			*swap_champs(t_lst_champs *tmp, t_lst_champs *prev);
+void					parse_champs(void);
+void					read_champs(void);
 #endif
