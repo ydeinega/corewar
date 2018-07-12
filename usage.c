@@ -40,7 +40,7 @@
 */
 
 /*
-**	char	*g_error[10] =
+**	char	*g_error[16] =
 **	{
 **	0		"invalid argument",
 ** 	1		"argument nbr_cycles is invalid or missing\n"
@@ -54,7 +54,13 @@
 **	7		"numbering value inconsistent"
 **	8		"argument number is invalid or missing\n"
 **			"Number argument is needed after -v",
-**	9		"number argument (after -v) must be in the range from 0 to 31"
+**	9		"number argument (after -v) must be in the range from 0 to 31",
+**	10		"has an invalid header",
+**	11		"is too small to be a champion",
+**	12		"cannot be opened and/or read",
+**	13		"has a code size that differs from what its header says",
+**	14		"is too big to be a champion",
+**	15		"has a name/comment which is too long"
 **	};
 */
 
@@ -83,7 +89,7 @@ char	*g_usage[19] =
 	"Runs nbr_cycles and then starts ncurses output mode"
 };
 
-char	*g_error[10] =
+char	*g_error[16] =
 {
 	"invalid argument",
 	"argument nbr_cycles is invalid or missing\n"
@@ -97,7 +103,13 @@ char	*g_error[10] =
 	"numbering value inconsistent",
 	"argument number is invalid or missing\n"
 	"Number argument is needed after -v",
-	"number argument (after -v) must be in the range from 0 to 31"
+	"number argument (after -v) must be in the range from 0 to 31",
+	"has an invalid header",
+	"is too small to be a champion",
+	"cannot be opened and/or read",
+	"has a code size that differs from what its header says",
+	"is too big to be a champion",
+	"has a name/comment which is too long"
 };
 
 void	usage(void)
@@ -119,14 +131,27 @@ void	usage(void)
 
 void	error(int num)
 {
-	//clean_game
+	t_lst_champs	*tmp;
+
+	tmp = NULL;
 	if (num >= 0)
 	{
-		ft_printf("ERROR");
-		ft_printf(": %s", g_error[num]);
+		ft_printf("ERROR: ");
+		if (num >= 10 && num <= 15)
+		{
+			tmp = g_game.champ;
+			while (tmp)
+			{
+				if (tmp->error == num)
+					ft_printf("File %s ", tmp->file_name);
+				tmp = tmp->next;
+			}
+		}
+		ft_printf("%s", g_error[num]);
 		if (num == 6 || num == 3)
 			ft_printf("%d", MAX_PLAYERS);
 		ft_printf("\n");
 	}
+	//clean_game
 	exit(1);
 }

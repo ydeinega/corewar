@@ -21,13 +21,14 @@ t_lst_champs	*new_champ(char *file_name, int num, bool n_flag)
 		return (NULL);
 	champ->file_name = file_name;
 	champ->num = num;
+	champ->error = 0;
 	champ->n_flag = n_flag;
 	champ->fd = 0;
-	champ->file_cont = NULL;
-	champ->file_size = 0;
+	//champ->file_cont = NULL;
+	champ->size = 0;
 	champ->magic = 0;
-	champ->name = NULL;
-	champ->comment = NULL;
+	//champ->name = NULL;
+	//champ->comment = NULL;
 	champ->comms = NULL;
 	champ->next = NULL;
 	return (champ);

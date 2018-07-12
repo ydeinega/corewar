@@ -18,9 +18,10 @@
 # include <fcntl.h>
 # include "op.h"
 # include "./libft/libft.h"
+# define HEX "0123456789abcdef"
 
-extern char			*g_usage[19];
-extern char			*g_error[10];
+extern char				*g_usage[19];
+extern char				*g_error[16];
 
 typedef struct			s_change
 {
@@ -41,7 +42,7 @@ typedef	struct			s_player
 	char				*comment;
 	unsigned char		*comms;
 	int					start;
-	int					len;
+	unsigned int		len;
 	int					last_live;
 	int					lives_in_curr;
 }						t_player;
@@ -49,14 +50,14 @@ typedef	struct			s_player
 typedef struct			s_lst_champs
 {
 	int					num;
+	int					error;
 	bool				n_flag;
 	char				*file_name;//no malloc
 	int					fd;
-	char				*file_cont;
-	unsigned int		file_size;
 	unsigned int		magic;
-	char				*name;
-	unsigned char		*comment;
+	unsigned int		size;
+	char				name[PROG_NAME_LENGTH + 1];
+	char				comment[COMMENT_LENGTH + 1];
 	unsigned char		*comms;//instructions
 	struct s_lst_champs	*next;//no malloc
 }						t_lst_champs;
@@ -93,5 +94,15 @@ void					check_positions(void);
 void					sort_champs(void);
 t_lst_champs			*swap_champs(t_lst_champs *tmp, t_lst_champs *prev);
 void					parse_champs(void);
-void					read_champs(void);
+void					read_champs_info(t_lst_champs *champ);
+unsigned int			read_num(t_lst_champs *champ, int len);
+void					read_string(t_lst_champs *champ, char *line, int len);
+void					read_instructions(t_lst_champs *champ);
+unsigned int			conv_hex(unsigned char *line, int length);
+char					*ft_strljoin(char **s1, char **s2);
+char					*hex_line(unsigned char *line, int length);
+unsigned int			ft_atoi_base(char *str, long long base);
+void					print_champ(t_lst_champs *champ);//del
+void					start_game(void);
+t_player				*create_players(void);
 #endif

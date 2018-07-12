@@ -14,64 +14,127 @@
 
 void	parse_champs(void)
 {
-	read_champs();
-}
-
-void	read_champs(void)
-{
 	t_lst_champs	*tmp;
-	int				fd;//
-	unsigned char	line[5000];//memset
-	char			*ptr;
-	int				ret;
 
-	//line = NULL;
 	tmp = g_game.champ;
-	ptr = NULL;
-	fd = open("test", O_CREAT | O_WRONLY, S_IRWXU);
 	while (tmp)
 	{
-		ft_printf("file_name = |%s|\n", tmp->file_name);
 		if ((tmp->fd = open(tmp->file_name, O_RDONLY)) == -1)
 		{
-			perror("open() ");
-			error(-1);
+			tmp->error = 12;
+			error(12);
 		}
-		ret = read(tmp->fd, line, 5000);
-		if (ret == -1)
-			perror("read() ");
-		line[ret] = '\0';
-
-		int i;
-		int check;
-		
-		i = 0;
-		check = 0;
-		while (i < ret)
-		{
-			ft_printf("%02X ", line[i]);
-			check++;
-			i++;
-			if (check == 32)
-			{
-				ft_printf("\n");
-				check = 0;
-			}
-		}
-		//ret = get_next_line(tmp->fd, &line);
-
-
-		// while (get_next_line(tmp->fd, &line))
-		// {
-		// 	if (tmp->file_cont)
-		// 	{
-
-		// 	}
-		// }
-		//ft_printf("%s\n", tmp->file_cont);
-		//ft_printf("fd = %d ret = %d ft_strlen = %d\n", tmp->fd, ret, ft_strlen(line));
-		//ft_printf("fd = %d ret = %d ft_strlen_u = %d\n", tmp->fd, ret, ft_strlen_u(line));
-		//ft_putstr_fd(line, fd);
+		read_champs_info(tmp);
 		tmp = tmp->next;
 	}
+}
+
+unsigned int	read_num(t_lst_champs *champ, int len)
+{
+	int				ret;
+	unsigned char	line[len];
+
+	ret = read(champ->fd, line, len);
+	if (ret == -1)
+	{
+		champ->error = 12;
+		error(12);
+	}
+	if (ret < len)
+	{
+		champ->error = 11;
+		error(11);
+	}
+	return (conv_hex(line, len));
+}
+
+void	read_string(t_lst_champs *champ, char *line, int len)
+{
+	int		ret;
+
+	ret = read(champ->fd, line, len);
+	if (ret == -1)
+	{
+		champ->error = 12;
+		error(12);
+	}
+	if (ret < len)
+	{
+		champ->error = 11;
+		error(11);
+	}
+	line[len] = '\0';
+}
+
+void	read_instructions(t_lst_champs *champ)
+{
+	int		ret;
+	char	line;
+
+	ret = 0;
+	champ->comms = (unsigned char *)malloc(sizeof(unsigned char) * champ->size);
+	ret = read(champ->fd, champ->comms, champ->size);
+	if (ret == -1)
+	{
+		champ->error = 12;
+		error(12);
+	}
+	if ((unsigned int)ret < champ->size)
+	{
+		champ->error = 13;
+		error(13);
+	}
+	ret = read(champ->fd, &line, 1);
+	if (ret != 0)
+	{
+		champ->error = 13;
+		error(13);
+	}
+}
+
+void	read_champs_info(t_lst_champs *champ)
+{
+	champ->magic = read_num(champ, 4);
+	if (champ->magic != COREWAR_EXEC_MAGIC)
+	{
+		champ->error = 10;
+		error(10);
+	}
+	read_string(champ, champ->name, PROG_NAME_LENGTH);
+	if (read_num(champ, 4) != 0)//обычный корвар не распознает эту ошибку
+	{
+		champ->error = 15;//нужно другую ошибку здесь прописать
+		error(15);
+	}
+	champ->size = read_num(champ, 4);
+	if (champ->size > CHAMP_MAX_SIZE)
+	{
+		champ->error = 14;
+		error(14);
+	}
+	read_string(champ, champ->comment, COMMENT_LENGTH);
+	if (read_num(champ, 4) != 0)//обычный корвар не распознает эту ошибку
+	{
+		champ->error = 15;//has a name/comment which is too long
+		error(15);
+	}
+	read_instructions(champ);
+	//print_champ(champ);//del
+}
+
+void	print_champ(t_lst_champs *champ)//del
+{
+	unsigned int i;
+	
+	i = 0;
+	ft_printf("name = |%s|\n", champ->name);
+	ft_printf("magic = %#x\n", champ->magic);
+	ft_printf("comment = |%s|\n", champ->comment);
+	ft_printf("size = |%u|\n", champ->size);
+	while (i < champ->size)
+	{
+		ft_printf("%02x ", champ->comms[i]);
+		i++;
+	}
+	ft_printf("\n");
 }
