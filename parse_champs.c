@@ -121,20 +121,3 @@ void	read_champs_info(t_lst_champs *champ)
 	read_instructions(champ);
 	//print_champ(champ);//del
 }
-
-void	print_champ(t_lst_champs *champ)//del
-{
-	unsigned int i;
-	
-	i = 0;
-	ft_printf("name = |%s|\n", champ->name);
-	ft_printf("magic = %#x\n", champ->magic);
-	ft_printf("comment = |%s|\n", champ->comment);
-	ft_printf("size = |%u|\n", champ->size);
-	while (i < champ->size)
-	{
-		ft_printf("%02x ", champ->comms[i]);
-		i++;
-	}
-	ft_printf("\n");
-}

@@ -17,6 +17,9 @@ void	initialize_game(void)
 {
 	g_game.players = 0;
 	g_game.champ = NULL;
+	g_game.player = NULL;
+	g_game.board = NULL;
+	g_game.proc = NULL;
 	g_game.dump = false;
 	g_game.visu = false;
 	g_game.v = false;

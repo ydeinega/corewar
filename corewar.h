@@ -34,10 +34,18 @@ typedef struct			s_change
 typedef struct			s_process
 {
 	int					player;
+	bool				carry;
+	bool				live;
+	int					pc;
+	int					cycles_to_exec;
+	unsigned int		reg[REG_NUMBER];
+	int					opcode;
+	struct s_process	*next;
 }						t_process;
 
 typedef	struct			s_player
 {
+	int					num;
 	char				*name;
 	char				*comment;
 	unsigned char		*comms;
@@ -58,7 +66,7 @@ typedef struct			s_lst_champs
 	unsigned int		size;
 	char				name[PROG_NAME_LENGTH + 1];
 	char				comment[COMMENT_LENGTH + 1];
-	unsigned char		*comms;//instructions
+	unsigned char		*comms;//instructions malloc!
 	struct s_lst_champs	*next;//no malloc
 }						t_lst_champs;
 
@@ -66,6 +74,9 @@ typedef	struct			s_parse
 {
 	int					players;
 	t_lst_champs		*champ;
+	t_player			*player;
+	unsigned char		*board;
+	t_process			*proc;
 	bool				dump;
 	bool				visu;
 	bool				v;
@@ -102,7 +113,18 @@ unsigned int			conv_hex(unsigned char *line, int length);
 char					*ft_strljoin(char **s1, char **s2);
 char					*hex_line(unsigned char *line, int length);
 unsigned int			ft_atoi_base(char *str, long long base);
-void					print_champ(t_lst_champs *champ);//del
 void					start_game(void);
 t_player				*create_players(void);
+unsigned char			*create_board(t_player *player);
+void					dump(void);
+t_process				*create_process(t_player *player);
+t_process				*new_process(t_player *player, t_process *proc, int pc);
+void					add_process(t_process **head, t_process *new);
+void					regcpy(unsigned int *dst, unsigned int *src, int len);
+void					regset(unsigned int *dst, unsigned int c, int len);
+
+
+void					print_champ(t_lst_champs *champ);//del
+void					print_proc(t_process *proc);//del debug
+void					print_players(t_player *player);//del
 #endif

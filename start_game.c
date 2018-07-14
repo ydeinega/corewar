@@ -1,17 +1,6 @@
 #include "corewar.h"
 
-int			find_start(int i)
-{
-	int rows;
-	int	res;
-
-	res = 0;
-	rows = (MEM_SIZE / 32) / g_game.players;
-	res = rows * (i - 1) * 32;
-	return (res);
-}
-
-t_player	*create_players(void)
+t_player		*create_players(void)
 {
 	t_player		*player;
 	t_lst_champs	*tmp;
@@ -26,11 +15,12 @@ t_player	*create_players(void)
 	while (++i < g_game.players)
 	{
 		tmp = g_game.champ;
+		player[i].num = i + 1;
 		player[i].name = tmp->name;
 		player[i].comment = tmp->comment;
 		player[i].comms = tmp->comms;
 		player[i].len = tmp->size;
-		player[i].start = find_start(i + 1);
+		player[i].start = (MEM_SIZE / g_game.players) * i;
 		player[i].last_live = 0;
 		player[i].lives_in_curr = 0;
 		g_game.champ = g_game.champ->next;
@@ -56,38 +46,32 @@ unsigned char	*create_board(t_player *player)
 	return (board);
 }
 
-void		dump(unsigned char *board)
+void			dump(void)
 {
-	int i;
-	int	new_line;
+	int				i;
 
-	i = -1;
-	new_line = 0;
-	while (++i < MEM_SIZE)
+	i = 0;
+	while (i < MEM_SIZE)
 	{
-		ft_printf("%02x ", board[i]);
-		new_line++;
-		if (new_line == 32)
+		if (i % 64 == 0)//change it to 32 (in subject it is 32 bytes)
 		{
-			ft_printf("\n");
-			new_line = 0;
+			if (i != 0)
+				ft_printf("\n");
+			ft_printf("%#06x :", i);
 		}
+		ft_printf(" %02x", g_game.board[i]);
+		i++;
 	}
+	ft_printf("\n");
 }
 
-void		start_game(void)
+void			start_game(void)
 {
-	t_player		*player;
-	unsigned char	*board;
-
-	player = create_players();
-	board = create_board(player);
-	dump(board);
-	// int i = 0;
-	// while (i < g_game.players)
-	// {
-	// 	ft_printf("num = %i  start = %i name = %s\n", i + 1, player[i].start, player[i].name);
-	// 	ft_printf("comment = %s\n", player[i].comment);
-	// 	i++;
-	// }
+	g_game.player = create_players();
+	g_game.board = create_board(g_game.player);
+	g_game.proc = create_process(g_game.player);
+	print_proc(g_game.proc);
+	//dump();
+	//free(player);
+	//free(board);
 }
