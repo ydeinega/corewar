@@ -18,6 +18,7 @@
 # include <fcntl.h>
 # include "op.h"
 # include "./libft/libft.h"
+# include "verbosity.h"
 # define HEX "0123456789abcdef"
 
 extern char				*g_usage[19];
@@ -33,13 +34,16 @@ typedef struct			s_change
 
 typedef struct			s_process
 {
+	int					num;
 	int					player;
 	bool				carry;
 	bool				live;
+	int					lives_ctd;
 	int					pc;
+	int					cycles_not_live;
+	int					opcode;
 	int					cycles_to_exec;
 	unsigned int		reg[REG_NUMBER];
-	int					opcode;
 	struct s_process	*next;
 }						t_process;
 
@@ -73,10 +77,17 @@ typedef struct			s_lst_champs
 typedef	struct			s_parse
 {
 	int					players;
+	int					proc_num;
+	int					cycle;
+	int					ctd;
+	int					ctd_cur;
+	int					checks;
+	int					player_last_live;
 	t_lst_champs		*champ;
 	t_player			*player;
 	unsigned char		*board;
 	t_process			*proc;
+	bool				end;
 	bool				dump;
 	bool				visu;
 	bool				v;
@@ -122,6 +133,10 @@ t_process				*new_process(t_player *player, t_process *proc, int pc);
 void					add_process(t_process **head, t_process *new);
 void					regcpy(unsigned int *dst, unsigned int *src, int len);
 void					regset(unsigned int *dst, unsigned int c, int len);
+void					run_game(void);
+void					make_check(void);
+bool					check_deaths(void);
+bool					check_nbr_live(void);
 
 
 void					print_champ(t_lst_champs *champ);//del

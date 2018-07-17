@@ -27,10 +27,13 @@ t_process	*new_process(t_player *player, t_process *proc, int pc)
 		perror("malloc() in new_process() failed ");
 		error(-1);
 	}
+	new->num = ++g_game.proc_num;
 	new->player = player ? player->num : proc->player;
 	new->carry = player ? 0 : proc->carry;
 	new->live = 1;
+	new->lives_ctd = 0;
 	new->pc = pc;
+	new->cycles_not_live = 0;
 	new->cycles_to_exec = 0;
 	new->opcode = 0;
 	new->next = NULL;

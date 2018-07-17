@@ -9,9 +9,13 @@ void		print_proc(t_process *proc)//del
 	i = -1;
 	while (tmp)
 	{
+		ft_printf("num = %i\n", tmp->num);
 		ft_printf("player = %i\n", tmp->player);
+		ft_printf("live = %i\n", tmp->live);
+		ft_printf("lives_ctd = %i\n", tmp->lives_ctd);
 		ft_printf("carry = %i\n", tmp->carry);
 		ft_printf("pc = %i\n", tmp->pc);
+		ft_printf("cycles_not_live = %i\n", tmp->cycles_not_live);
 		ft_printf("cycles_to_exec = %i\n", tmp->cycles_to_exec);
 		ft_printf("opcode = %i\n", tmp->opcode);
 		while (++i < REG_NUMBER)
