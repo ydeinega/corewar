@@ -53,3 +53,18 @@ void	print_players(t_player *player)
 		i++;
 	}
 }
+
+void	print_info_before_exec(t_process *tmp, int move)
+{
+	ft_printf("CYCLES = %d\n", g_game.cycle);
+	ft_printf("Cycles_to_exec = %d\n", tmp->cycles_to_exec);
+	ft_printf("INSTRUCT %d executed\n", tmp->opcode);
+	ft_printf("PC before = %d\nMove = %d\n", tmp->pc, move);
+}
+
+void	print_info_after_exec(t_process *tmp)
+{
+	ft_printf("NEW INSTRUCT %d read\n", tmp->opcode);
+	ft_printf("Cycles_to_exec = %d\n", tmp->cycles_to_exec);
+	ft_printf("PC after = %d\n", tmp->pc);
+}

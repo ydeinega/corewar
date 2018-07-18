@@ -21,9 +21,6 @@
 # include "verbosity.h"
 # define HEX "0123456789abcdef"
 
-extern char				*g_usage[19];
-extern char				*g_error[16];
-
 typedef struct			s_change
 {
 	int					player;
@@ -96,7 +93,11 @@ typedef	struct			s_parse
 	int					number_v;
 }						t_parse;
 
+typedef	int				(*funcptr)(t_process *process);
 t_parse					g_game;
+extern char				*g_usage[19];
+extern char				*g_error[16];
+extern funcptr			g_command[16];
 void					usage(void);
 void					error(int num);
 void					parse_args(int argc, char **argv);
@@ -137,9 +138,30 @@ void					run_game(void);
 void					make_check(void);
 bool					check_deaths(void);
 bool					check_nbr_live(void);
+void					run_processes(void);
+void					exec_instruct(t_process *tmp);//
+void					read_next_instruct(t_process *tmp, int move);
+int						exec_live(t_process *process);
+int						exec_ld(t_process *process);
+int						exec_st(t_process *process);
+int						exec_add(t_process *process);
+int						exec_sub(t_process *process);
+int						exec_and(t_process *process);
+int						exec_or(t_process *process);
+int						exec_xor(t_process *process);
+int						exec_zjmp(t_process *process);
+int						exec_ldi(t_process *process);
+int						exec_sti(t_process *process);
+int						exec_fork(t_process *process);
+int						exec_lld(t_process *process);
+int						exec_lldi(t_process *process);
+int						exec_lfork(t_process *process);
+int						exec_aff(t_process *process);
 
 
 void					print_champ(t_lst_champs *champ);//del
 void					print_proc(t_process *proc);//del debug
 void					print_players(t_player *player);//del
+void					print_info_before_exec(t_process *tmp, int move);//
+void					print_info_after_exec(t_process *tmp);//
 #endif

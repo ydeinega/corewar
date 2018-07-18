@@ -16,9 +16,22 @@ LIB = ./libft/libft.a
 
 FLAGS = -Wall -Wextra -Werror -I. -c
 
-SRCS = main.c usage.c parse_args.c validate_champ.c \
-new_champ.c validation.c parse_champs.c ft_strljoin.c \
-start_game.c create_process.c run_game.c \
+SRCS = \
+main.c \
+usage.c \
+parse_args.c \
+validate_champ.c \
+new_champ.c \
+validation.c \
+parse_champs.c \
+ft_strljoin.c \
+start_game.c \
+create_process.c \
+run_game.c \
+run_processes.c \
+instruction_1.c \
+instruction_2.c \
+instruction_3.c \
 verb_mode.c \
 print_for_debug.c
 

@@ -34,8 +34,8 @@ t_process	*new_process(t_player *player, t_process *proc, int pc)
 	new->lives_ctd = 0;
 	new->pc = pc;
 	new->cycles_not_live = 0;
-	new->cycles_to_exec = 0;
-	new->opcode = 0;
+	new->opcode = conv_hex(&g_game.board[pc], 1);//
+	new->cycles_to_exec = 10;//change depending on the opcode
 	new->next = NULL;
 	if (proc)
 		regcpy(new->reg, proc->reg, REG_NUMBER);
