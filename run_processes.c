@@ -44,9 +44,14 @@ void	run_processes(void)
 
 void	exec_instruct(t_process *tmp)//это можно не выносить в отдельную ф-ию
 {
-	int move;
+	t_arg_type	argument[3];
 
-	move = g_command[tmp->opcode - 1](tmp);
+	if (op_tab[tmp->opcode - 1].codage)
+		argument = get_codage(tmp);
+	
+
+
+	g_command[tmp->opcode - 1](tmp);
 	print_info_before_exec(tmp, move);//del
 	
 	tmp->opcode = 0;
@@ -65,7 +70,7 @@ void	read_next_instruct(t_process *tmp, int move)
 	if (code >= 1 && code <= 16)
 	{
 		tmp->opcode = code;
-		tmp->cycles_to_exec = 10;//здесь нужно смотреть в табличке
+		tmp->cycles_to_exec = op_tab[code - 1].cycles_to_exec;//здесь нужно смотреть в табличке
 	}
 	//после того как мы все это сделали движение каретки записываем в верб, если этот
 	//флаг имеется

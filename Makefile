@@ -33,6 +33,8 @@ instruction_1.c \
 instruction_2.c \
 instruction_3.c \
 verb_mode.c \
+instruct_info.c \
+get_codage.c \
 print_for_debug.c
 
 

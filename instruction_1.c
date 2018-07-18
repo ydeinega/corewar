@@ -2,8 +2,9 @@
 
 int						exec_live(t_process *process)
 {
-	if (process)
-		return (5);
+	int	move;
+
+	
 	return (0);
 }
 

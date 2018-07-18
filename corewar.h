@@ -93,11 +93,24 @@ typedef	struct			s_parse
 	int					number_v;
 }						t_parse;
 
+typedef	struct 			s_op
+{
+	char				*op;
+	int					arg_num;
+	t_arg_type			argument[3];
+	int					opcode;
+	int					cycles_to_exec;
+	char				*comment;
+	bool				codage;
+	bool				carry;
+}						t_op;
+
 typedef	int				(*funcptr)(t_process *process);
 t_parse					g_game;
 extern char				*g_usage[19];
 extern char				*g_error[16];
 extern funcptr			g_command[16];
+t_op					op_tab[17];
 void					usage(void);
 void					error(int num);
 void					parse_args(int argc, char **argv);
@@ -157,6 +170,7 @@ int						exec_lld(t_process *process);
 int						exec_lldi(t_process *process);
 int						exec_lfork(t_process *process);
 int						exec_aff(t_process *process);
+int						get_cycles_to_exec(int opcode);
 
 
 void					print_champ(t_lst_champs *champ);//del
