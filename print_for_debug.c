@@ -68,3 +68,16 @@ void	print_info_after_exec(t_process *tmp)
 	ft_printf("Cycles_to_exec = %d\n", tmp->cycles_to_exec);
 	ft_printf("PC after = %d\n", tmp->pc);
 }
+
+void	print_codage(int codage, t_arg_type *arg, int arg_num)
+{
+	int i;
+
+	i = 0;
+	ft_printf("codage = %i\n", codage);
+	while (i < arg_num)
+	{
+		ft_printf("arg%i = %i\n", i + 1, arg[i]);
+		i++;
+	}
+}

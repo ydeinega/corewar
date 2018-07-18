@@ -97,12 +97,13 @@ typedef	struct 			s_op
 {
 	char				*op;
 	int					arg_num;
-	t_arg_type			argument[3];
+	t_arg_type			arg[3];
 	int					opcode;
 	int					cycles_to_exec;
-	char				*comment;
+	char				*descript;
 	bool				codage;
 	bool				carry;
+	int					label;
 }						t_op;
 
 typedef	int				(*funcptr)(t_process *process);
@@ -170,7 +171,7 @@ int						exec_lld(t_process *process);
 int						exec_lldi(t_process *process);
 int						exec_lfork(t_process *process);
 int						exec_aff(t_process *process);
-int						get_cycles_to_exec(int opcode);
+t_arg_type				*get_codage(t_process *process, int arg_num);
 
 
 void					print_champ(t_lst_champs *champ);//del
@@ -178,4 +179,5 @@ void					print_proc(t_process *proc);//del debug
 void					print_players(t_player *player);//del
 void					print_info_before_exec(t_process *tmp, int move);//
 void					print_info_after_exec(t_process *tmp);//
+void					print_codage(int codage, t_arg_type *arg, int arg_num);//
 #endif

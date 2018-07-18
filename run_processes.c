@@ -44,16 +44,19 @@ void	run_processes(void)
 
 void	exec_instruct(t_process *tmp)//это можно не выносить в отдельную ф-ию
 {
-	t_arg_type	argument[3];
+	t_arg_type	*argument;
+	int			arg_num;
+	int			move;
+	t_op		op;
 
-	if (op_tab[tmp->opcode - 1].codage)
-		argument = get_codage(tmp);
-	
-
-
-	g_command[tmp->opcode - 1](tmp);
+	op = op_tab[tmp->opcode - 1];
+	arg_num = op.arg_num;
+	if (op.codage)
+		argument = get_codage(tmp, arg_num);
+	if (!op.codage || (op.codage && codage_valid(argument, op.arg, arg_num)))
+		g_command[tmp->opcode - 1](tmp);
+	move = get_move(tmp, argument);
 	print_info_before_exec(tmp, move);//del
-	
 	tmp->opcode = 0;
 	read_next_instruct(tmp, move);
 	print_info_after_exec(tmp);//del
