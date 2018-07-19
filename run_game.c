@@ -2,9 +2,13 @@
 
 void	run_game(void)
 {
+	// if (g_game.v)
+	// 	initialize_verb();
 	while (g_game.end != true || g_game.ctd > 0)
 	{
 		g_game.cycle++;
+		// if (g_game.v)
+		// 	start_verb(g_game.cycle, g_game.ctd);
 		g_game.ctd_cur++;
 		run_processes();
 		if (g_game.ctd_cur == g_game.ctd)

@@ -2,10 +2,8 @@
 
 void	exec_live(t_process *process, int *arg)
 {
-	t_op			op;
 	int				champ_num;
 
-	op = op_tab[process->opcode - 1];
 	champ_num = -(*arg);
 	if (champ_num > 0 && champ_num < g_game.players)
 	{
@@ -13,6 +11,7 @@ void	exec_live(t_process *process, int *arg)
 		g_game.player[champ_num - 1].lives_in_curr++;
 		g_game.player[champ_num - 1].last_live = g_game.cycle;
 	}
+	//Subject! Check!
 }
 
 void	exec_ld(t_process *process, int *arg)

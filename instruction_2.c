@@ -2,8 +2,12 @@
 
 void	exec_and(t_process *process, int *arg)
 {
-	if (process && arg)
-		return ;
+	t_op	op;
+	int		i;
+	int		arg_fin
+
+	op = op_tab[process->opcode - 1];
+
 }
 
 void	exec_or(t_process *process, int *arg)

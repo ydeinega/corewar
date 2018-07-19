@@ -175,7 +175,8 @@ t_arg_type				*get_codage(t_process *process, int arg_num);
 bool					codage_valid(t_arg_type *arg_type, t_arg_type *ref, int arg_num);
 int						get_move(t_process *proc, t_arg_type *arg_type);
 int						*extract_arg(t_op op, int pc, t_arg_type *arg_type);
-unsigned char			*extract_line(int *pc, int length);
+unsigned char			*extract_line(int pc, int length, int base);
+int						extract_ind(int pc, int delta);
 
 void					print_champ(t_lst_champs *champ);//del
 void					print_proc(t_process *proc);//del debug
