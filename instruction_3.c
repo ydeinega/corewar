@@ -1,43 +1,37 @@
 #include "corewar.h"
 
-int						exec_sti(t_process *process)
+void	exec_sti(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_fork(t_process *process)
+void	exec_fork(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_lld(t_process *process)
+void	exec_lld(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_lldi(t_process *process)
+void	exec_lldi(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_lfork(t_process *process)
+void	exec_lfork(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_aff(t_process *process)
+void	exec_aff(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }

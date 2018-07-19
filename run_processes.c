@@ -42,42 +42,58 @@ void	run_processes(void)
 	}
 }
 
-void	exec_instruct(t_process *tmp)//это можно не выносить в отдельную ф-ию
+void	exec_instruct(t_process *proc)//это можно не выносить в отдельную ф-ию
 {
-	t_arg_type	*argument;
+	t_arg_type	*arg_type;
 	int			arg_num;
 	int			move;
+	int			*arg;
 	t_op		op;
 
-	op = op_tab[tmp->opcode - 1];
+	arg_type = NULL;
+	arg = NULL;
+	op = op_tab[proc->opcode - 1];
 	arg_num = op.arg_num;
 	if (op.codage)
-		argument = get_codage(tmp, arg_num);
-	if (!op.codage || (op.codage && codage_valid(argument, op.arg, arg_num)))
-		g_command[tmp->opcode - 1](tmp);
-	move = get_move(tmp, argument);
-	print_info_before_exec(tmp, move);//del
-	tmp->opcode = 0;
-	read_next_instruct(tmp, move);
-	print_info_after_exec(tmp);//del
+		arg_type = get_codage(proc, arg_num);
+	if (!op.codage || (op.codage && codage_valid(arg_type, op.arg, arg_num)))
+	{
+		arg = extract_arg(op, proc->pc, arg_type);
+		g_command[proc->opcode - 1](proc, arg);
+		if (proc->opcode == 1)
+			proc->lives_ctd++;
+		else
+			proc->cycles_not_live++;
+		//print_arg(arg, proc->opcode);//del
+		// if (g_game.v)
+		// 	verb_add_to_op(proc->opcode, arg_type, arg);
+		
+	}
+	move = get_move(proc, argument);
+	// print_info_before_exec(proc, move);//del
+	proc->opcode = 0;
+	read_next_instruct(proc, move);
+	// print_info_after_exec(proc);//del
+	//free(arg_type);
+	//free(arg);
 }
 
-void	read_next_instruct(t_process *tmp, int move)
+void	read_next_instruct(t_process *proc, int move)
 {
 	int 			pc_prev;
 	unsigned int	code;
 
-	pc_prev = tmp->pc;
-	tmp->pc = (tmp->pc + move) % MEM_SIZE;
-	code = conv_hex(&g_game.board[tmp->pc], 1);
+	pc_prev = proc->pc;
+	proc->pc = (proc->pc + move) % MEM_SIZE;
+	code = conv_hex(&g_game.board[proc->pc], 1);
 	if (code >= 1 && code <= 16)
 	{
-		tmp->opcode = code;
-		tmp->cycles_to_exec = op_tab[code - 1].cycles_to_exec;//здесь нужно смотреть в табличке
+		proc->opcode = code;
+		proc->cycles_to_exec = op_tab[code - 1].cycles_to_exec;//здесь нужно смотреть в табличке
 	}
 	//после того как мы все это сделали движение каретки записываем в верб, если этот
 	//флаг имеется
 	//if (g_game.v)
-		// verb_add_pc_move(pc_prev, tmp->pc, move, g_game.board)
+		// verb_move_pc_move(pc_prev, proc->pc, move, g_game.board)
 }
 

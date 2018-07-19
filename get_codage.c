@@ -2,7 +2,7 @@
 
 t_arg_type	*get_codage(t_process *process, int arg_num)
 {
-	t_arg_type		*arg;
+	t_arg_type		*arg_type;
 	int				codage_pc;
 	unsigned int	codage;
 	int				i;
@@ -12,14 +12,58 @@ t_arg_type	*get_codage(t_process *process, int arg_num)
 	shift = 6;
 	codage_pc = (process->pc + 1) % MEM_SIZE;
 	codage = conv_hex(&g_game.board[codage_pc], 1);
-	arg = ft_strnew(arg_num);
+	arg_type = ft_strnew(arg_num);
 	while (i < arg_num)
 	{
-		arg[i] = (codage >> shift) & 3;
+		arg_type[i] = (codage >> shift) & 3;
+		if (arg_type[i] == REG_CODE)
+			arg_type[i] = T_REG;
+		else if (arg_type[i] == DIR_CODE)
+			arg_type[i] = T_DIR;
+		else if (arg_type[i] == IND_CODE)
+			arg_type[i] = T_IND;
 		shift -= 2;
 		i++;
 	}
-	print_codage(codage, arg, arg_num);//
-	return (arg);
+	//print_codage(codage, arg_type, arg_num);//
+	return (arg_type);
 }
 
+bool	codage_valid(t_arg_type *arg_type, t_arg_type *ref, int arg_num)
+{
+	int i;
+	int check;
+
+	i = 0;
+	check = 0;
+	while (i < arg_num)
+	{
+		if ((arg_type[i] & ref[i]) > 0)//это побитовое и
+			check++;
+		i++;
+	}
+	return (check == arg_num ? 1 : 0);
+}
+
+int		get_move(t_process *proc, t_arg_type *arg_type)
+{
+	int move;
+	int i;
+
+	move = 2;
+	i = 0;
+	if (arg_type)
+	{
+		while (arg_type[i])
+		{
+			if (arg_type[i] == T_REG)
+				move++;
+			else if (arg_type[i] == T_DIR)
+				move += op_tab[proc->opcode - 1].label;
+			else if (arg_type[i] == T_IND)
+				move += IND_SIZE; 
+			i++;
+		}
+	}
+	return (move);
+}

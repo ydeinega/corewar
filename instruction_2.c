@@ -1,36 +1,31 @@
 #include "corewar.h"
 
-int						exec_and(t_process *process)
+void	exec_and(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_or(t_process *process)
+void	exec_or(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_xor(t_process *process)
+void	exec_xor(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_zjmp(t_process *process)
+void	exec_zjmp(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_ldi(t_process *process)
+void	exec_ldi(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }

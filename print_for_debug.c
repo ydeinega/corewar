@@ -81,3 +81,22 @@ void	print_codage(int codage, t_arg_type *arg, int arg_num)
 		i++;
 	}
 }
+
+void	print_arg(int *argument, int opcode)
+{
+	t_op op;
+	int arg_num;
+	int i;
+
+	op = op_tab[opcode - 1];
+	arg_num = op.arg_num;
+	i = 0;
+	ft_printf("Instruction %s has %d arguments. HERE THEY ARE\n", op.op, arg_num);
+	while (i < arg_num)
+	{
+		ft_printf("%d ", argument[i]);
+		i++;
+	}
+	ft_printf("\n");
+
+}

@@ -35,6 +35,7 @@ instruction_3.c \
 verb_mode.c \
 instruct_info.c \
 get_codage.c \
+extract_arg.c \
 print_for_debug.c
 
 

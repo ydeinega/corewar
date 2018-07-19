@@ -1,36 +1,40 @@
 #include "corewar.h"
 
-int						exec_live(t_process *process)
+void	exec_live(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	t_op			op;
+	int				champ_num;
+
+	op = op_tab[process->opcode - 1];
+	champ_num = -(*arg);
+	if (champ_num > 0 && champ_num < g_game.players)
+	{
+		g_game.player_last_live = champ_num;
+		g_game.player[champ_num - 1].lives_in_curr++;
+		g_game.player[champ_num - 1].last_live = g_game.cycle;
+	}
 }
 
-int						exec_ld(t_process *process)
+void	exec_ld(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_st(t_process *process)
+void	exec_st(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_add(t_process *process)
+void	exec_add(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
 
-int						exec_sub(t_process *process)
+void	exec_sub(t_process *process, int *arg)
 {
-	if (process)
-		return (5);
-	return (0);
+	if (process && arg)
+		return ;
 }
