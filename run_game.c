@@ -30,6 +30,8 @@ void	make_check(void)
 	{
 		g_game.ctd -= CYCLE_DELTA;
 		g_game.checks = 0;
+		// if (g_game.v)//Изменяю флаг, когда меняю CTD
+		// 	g_verb.ctd_change = 1;
 	}
 	else
 		g_game.checks++;
@@ -37,6 +39,8 @@ void	make_check(void)
 	{
 		g_game.ctd -= CYCLE_DELTA; 
 		g_game.checks = 0;
+		// if (g_game.v)
+		// 	g_verb.ctd_change = 1;
 	}
 	if (g_game.end || g_game.ctd <= 0)
 		g_game.end = true;

@@ -75,7 +75,7 @@ void	exec_instruct(t_process *proc)
 	{
 		arg = extract_arg(op, proc->pc, arg_type);
 		if (arg_valid(arg_type, arg, op.arg_num))
-			g_command[proc->opcode - 1](proc, arg);
+			g_command[proc->opcode - 1](proc, arg, arg_type);
 		if (proc->opcode == 1)
 			proc->lives_ctd++;
 		else

@@ -36,6 +36,7 @@ verb_mode.c \
 instruct_info.c \
 get_codage.c \
 extract_arg.c \
+store_value.c \
 print_for_debug.c
 
 

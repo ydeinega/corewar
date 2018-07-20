@@ -18,21 +18,32 @@ void	exec_live(t_process *process, unsigned int *arg, t_arg_type *arg_type)
 
 void	exec_ld(t_process *process, unsigned int *arg, t_arg_type *arg_type)
 {
-	if (process && arg)
-		return ;
+	int		res;
+
+	res = arg_fin(process, arg[0], arg_type[0]);
+	process->reg[arg[1] - 1] = res;
+	if (res == 0)
+		process->carry = 1;
+	else
+		process->carry = 0;
 }
 
 void	exec_st(t_process *process, unsigned int *arg, t_arg_type *arg_type)
 {
-	if (process && arg)
-		return ;
+	int		res;
+
+	res = arg_fin(process, arg[0], arg_type[0]);
+	if (arg_type[1] == T_REG)
+		process->reg[arg[1] - 1] = res;
+	else if (arg_type[1] == T_IND)
+		store_value(process, res, arg[1], IDX_MOD);
 }
 
 void	exec_add(t_process *process, unsigned int *arg, t_arg_type *arg_type)
 {
 	int		res;
 
-	res = arg_fin(process, arg, arg_type, 0) + arg_fin(process, arg, arg_type, 1);
+	res = arg_fin(process, arg[0], arg_type[0]) + arg_fin(process, arg[1], arg_type[1]);
 	process->reg[arg[2] - 1] = res;
 	if (res == 0)
 		process->carry = 1;
@@ -44,7 +55,7 @@ void	exec_sub(t_process *process, unsigned int *arg, t_arg_type *arg_type)
 {
 	int		res;
 
-	res = arg_fin(process, arg, arg_type, 0) - arg_fin(process, arg, arg_type, 1);
+	res = arg_fin(process, arg[0], arg_type[0]) - arg_fin(process, arg[1], arg_type[1]);
 	process->reg[arg[2] - 1] = res;
 	if (res == 0)
 		process->carry = 1;

@@ -14,18 +14,6 @@ static int				get_length(t_arg_type arg_type, t_op op)
 	return (length);
 }
 
-unsigned int			extract_ind(int pc, int delta)//BASE???
-{
-	unsigned char	*line;
-	unsigned int	res;
-
-	res = 0;
-	line = extract_line(pc + delta, 4, IDX_MOD);//maybe dif here? depending on opcode?
-	res = conv_hex(line, 4);
-	free(line);
-	return (res);		
-}
-
 static unsigned int		get_arg(t_op op, t_arg_type arg_type, unsigned int res, int pc)
 {
 	if (arg_type == T_REG)
@@ -85,23 +73,28 @@ unsigned char		*extract_line(int pc, int length, int base)
 	return (line);
 }
 
+unsigned int			extract_ind(int pc, int delta)//BASE???
+{
+	unsigned char	*line;
+	unsigned int	res;
 
-// unsigned char	*extract_line(int *pc, int length)
-// {
-// 	int 			new_pc;
-// 	int 			i;
-// 	unsigned char	*line;
+	res = 0;
+	line = extract_line(pc + delta, 4, IDX_MOD);//maybe dif here? depending on opcode?
+	res = conv_hex(line, 4);
+	free(line);
+	return (res);		
+}
 
-// 	i = 0;
-// 	new_pc = *pc;
-// 	line = (unsigned char *)malloc(sizeof(unsigned char) * length);//if !line malloc failed
-// 	while (i < length)
-// 	{
-// 		new_pc = (new_pc + 1) % MEM_SIZE;
-// 		line[i] = g_game.board[new_pc];
-// 		i++;
-// 	}
-// 	*pc = new_pc;
-// 	return (line);
-// }
+unsigned int	arg_fin(t_process *process, unsigned int arg, t_arg_type arg_type)
+{
+	int		res;
 
+	res = 0;
+	if (arg_type == T_REG)
+		res = process->reg[arg - 1];
+	else if (arg_type == T_DIR)
+		res = arg;
+	else if (arg_type == T_IND)
+		res = extract_ind(process->pc, arg);//base in func is IDX_MODE. Is it right?
+	return (res);
+}

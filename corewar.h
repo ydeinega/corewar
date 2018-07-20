@@ -106,7 +106,7 @@ typedef	struct 			s_op
 	int					label;
 }						t_op;
 
-typedef	void			(*funcptr)(t_process *process, unsigned int *arg);
+typedef	void			(*funcptr)(t_process *process, unsigned int *arg, t_arg_type *arg_type);
 t_parse					g_game;
 extern char				*g_usage[19];
 extern char				*g_error[16];
@@ -155,22 +155,22 @@ bool					check_nbr_live(void);
 void					run_processes(void);
 void					exec_instruct(t_process *proc);//
 void					read_next_instruct(t_process *proc, int move, int base);
-void					exec_live(t_process *process, unsigned int *arg);
-void					exec_ld(t_process *process, unsigned int *arg);
-void					exec_st(t_process *process, unsigned int *arg);
-void					exec_add(t_process *process, unsigned int *arg);
-void					exec_sub(t_process *process, unsigned int *arg);
-void					exec_and(t_process *process, unsigned int *arg);
-void					exec_or(t_process *process, unsigned int *arg);
-void					exec_xor(t_process *process, unsigned int *arg);
-void					exec_zjmp(t_process *process, unsigned int *arg);
-void					exec_ldi(t_process *process, unsigned int *arg);
-void					exec_sti(t_process *process, unsigned int *arg);
-void					exec_fork(t_process *process, unsigned int *arg);
-void					exec_lld(t_process *process, unsigned int *arg);
-void					exec_lldi(t_process *process, unsigned int *arg);
-void					exec_lfork(t_process *process, unsigned int *arg);
-void					exec_aff(t_process *process, unsigned int *arg);
+void					exec_live(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_ld(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_st(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_add(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_sub(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_and(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_or(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_xor(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_zjmp(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_ldi(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_sti(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_fork(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_lld(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_lldi(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_lfork(t_process *process, unsigned int *arg, t_arg_type *arg_type);
+void					exec_aff(t_process *process, unsigned int *arg, t_arg_type *arg_type);
 t_arg_type				*get_codage(t_process *process, int arg_num);
 bool					codage_valid(t_arg_type *arg_type, t_arg_type *ref, int arg_num);
 int						get_move(t_process *proc, t_arg_type *arg_type, unsigned int *arg);
@@ -178,7 +178,9 @@ unsigned int			*extract_arg(t_op op, int pc, t_arg_type *arg_type);
 unsigned char			*extract_line(int pc, int length, int base);
 unsigned int			extract_ind(int pc, int delta);
 bool					arg_valid(t_arg_type *arg_type, unsigned int *arg, int arg_num);
-unsigned int			arg_fin(t_process *process, unsigned int *arg, t_arg_type *arg_type, int i);
+unsigned int			arg_fin(t_process *process, unsigned int arg, t_arg_type arg_type);
+void					store_value(t_process *proc, unsigned int value, int delta, int base);
+unsigned char			*to_hex_str(unsigned int num, unsigned int base);
 
 void					print_champ(t_lst_champs *champ);//del
 void					print_proc(t_process *proc);//del debug
