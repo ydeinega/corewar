@@ -154,7 +154,7 @@ bool					check_deaths(void);
 bool					check_nbr_live(void);
 void					run_processes(void);
 void					exec_instruct(t_process *proc);//
-void					read_next_instruct(t_process *proc, int move);
+void					read_next_instruct(t_process *proc, int move, int base);
 void					exec_live(t_process *process, unsigned int *arg);
 void					exec_ld(t_process *process, unsigned int *arg);
 void					exec_st(t_process *process, unsigned int *arg);
@@ -173,9 +173,12 @@ void					exec_lfork(t_process *process, unsigned int *arg);
 void					exec_aff(t_process *process, unsigned int *arg);
 t_arg_type				*get_codage(t_process *process, int arg_num);
 bool					codage_valid(t_arg_type *arg_type, t_arg_type *ref, int arg_num);
-int						get_move(t_process *proc, t_arg_type *arg_type);
+int						get_move(t_process *proc, t_arg_type *arg_type, unsigned int *arg);
 unsigned int			*extract_arg(t_op op, int pc, t_arg_type *arg_type);
 unsigned char			*extract_line(int pc, int length, int base);
+unsigned int			extract_ind(int pc, int delta);
+bool					arg_valid(t_arg_type *arg_type, unsigned int *arg, int arg_num);
+unsigned int			arg_fin(t_process *process, unsigned int *arg, t_arg_type *arg_type, int i);
 
 void					print_champ(t_lst_champs *champ);//del
 void					print_proc(t_process *proc);//del debug

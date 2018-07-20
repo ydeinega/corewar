@@ -36,7 +36,7 @@ void	run_processes(void)
 					exec_instruct(tmp);
 			}
 			else
-				read_next_instruct(tmp, 1);
+				read_next_instruct(tmp, 1, MEM_SIZE);
 		}
 		tmp = tmp->next;
 	}
@@ -45,8 +45,10 @@ void	run_processes(void)
 static t_arg_type	*get_arg_type(t_process *proc)
 {
 	t_arg_type		*arg_type;
+	t_op			op;
 
 	arg_type = NULL;
+	op = op_tab[proc->opcode - 1];
 	if (op.codage)
 		arg_type = get_codage(proc, op.arg_num);
 	else
@@ -63,14 +65,17 @@ void	exec_instruct(t_process *proc)
 	int				move;
 	unsigned int	*arg;
 	t_op			op;
+	int				base;
 
 	op = op_tab[proc->opcode - 1];
 	arg_type = get_arg_type(proc);
 	arg = NULL;
+	base = (proc->opcode == 9 && proc->carry) ? IDX_MOD : MEM_SIZE;
 	if (!op.codage || (op.codage && codage_valid(arg_type, op.arg, op.arg_num)))
 	{
 		arg = extract_arg(op, proc->pc, arg_type);
-		g_command[proc->opcode - 1](proc, arg);
+		if (arg_valid(arg_type, arg, op.arg_num))
+			g_command[proc->opcode - 1](proc, arg);
 		if (proc->opcode == 1)
 			proc->lives_ctd++;
 		else
@@ -84,22 +89,37 @@ void	exec_instruct(t_process *proc)
 	//there can be functions that change pc and I should not call move then
 	//zjmp, for instance
 	//other???
-	move = get_move(proc, arg_type);//here in move I should try to handle it
+	move = get_move(proc, arg_type, arg);//here in move I should try to handle it
 	//print_info_before_exec(proc, move);//del
 	proc->opcode = 0;
-	read_next_instruct(proc, move);
+	read_next_instruct(proc, move, base);
 	//print_info_after_exec(proc);//del
 	arg_type ? free(arg_type) : 0;
 	arg ? free(arg) : 0;
 }
 
-void	read_next_instruct(t_process *proc, int move)
+bool	arg_valid(t_arg_type *arg_type, unsigned int *arg, int arg_num)
+{
+	int i;
+
+	i = 0;
+	while (i < arg_num)
+	{
+		if (arg_type[i] == T_REG &&
+			(arg[i] == 0 || arg[i] > 16))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+void	read_next_instruct(t_process *proc, int move, int base)
 {
 	int 			pc_prev;
 	unsigned int	code;
 
 	pc_prev = proc->pc;
-	proc->pc = (proc->pc + move) % MEM_SIZE;
+	proc->pc = (proc->pc + move) % base;
 	code = conv_hex(&g_game.board[proc->pc], 1);
 	if (code >= 1 && code <= 16)
 	{

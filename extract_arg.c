@@ -14,7 +14,7 @@ static int				get_length(t_arg_type arg_type, t_op op)
 	return (length);
 }
 
-static unsigned int		extract_ind(int pc, int delta)//maybe I also need to have base here
+unsigned int			extract_ind(int pc, int delta)//BASE???
 {
 	unsigned char	*line;
 	unsigned int	res;

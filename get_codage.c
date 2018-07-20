@@ -45,15 +45,17 @@ bool	codage_valid(t_arg_type *arg_type, t_arg_type *ref, int arg_num)
 	return (check == arg_num ? 1 : 0);
 }
 
-int		get_move(t_process *proc, t_arg_type *arg_type)
+int		get_move(t_process *proc, t_arg_type *arg_type, unsigned int *arg)
 {
 	t_op op;
 	int move;
 	int i;
 
+	i = 0;
 	op = op_tab[proc->opcode - 1];
 	move = op.codage ? 2 : 1;
-	i = 0;
+	if (proc->opcode == 9 && proc->carry)
+		return ((int)(*arg));
 	if (arg_type)
 	{
 		while (arg_type[i])

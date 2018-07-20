@@ -8,2365 +8,418 @@ cycles_not_live = 0
 cycles_to_exec = 25
 opcode = 11
 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 25
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 31
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 41
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 61
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 4159
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 4165
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 4175
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 4195
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 8293
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 8299
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 8309
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 8329
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 12427
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 12433
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 12443
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 12463
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 16561
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 16567
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 16577
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 16597
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 20695
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 20701
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 20711
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 20731
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 24829
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 24835
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 24845
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 24865
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 28963
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 28969
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 28979
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 28999
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 33097
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 33103
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 33113
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 33133
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 37231
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 37237
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 37247
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 37267
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 41365
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 41371
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 41381
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 41401
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 45499
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 45505
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 45515
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 45535
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 49633
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 49639
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 49649
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 49669
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 53767
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 53773
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 53783
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 53803
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 57901
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 57907
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 57917
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 57937
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 62035
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 62041
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 62051
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 62071
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 66169
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 66175
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 66185
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 66205
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 70303
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 70309
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 70319
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 70339
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 74437
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 74443
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 74453
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 74473
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 78571
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 78577
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 78587
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 78607
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 82705
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 82711
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 82721
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 82741
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 86839
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 86845
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 86855
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 86875
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 90973
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 90979
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 90989
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 91009
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 95107
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 95113
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 95123
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 95143
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 99241
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 99247
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 99257
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 99277
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 103375
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 103381
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 103391
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 103411
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 107509
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 107515
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 107525
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 107545
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 111643
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 111649
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 111659
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 111679
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 115777
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 115783
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 115793
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 115813
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 119911
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 119917
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 119927
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 119947
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 124045
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 124051
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 124061
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 124081
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 128179
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 128185
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 128195
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 128215
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 132313
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 132319
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 132329
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 132349
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 136447
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 136453
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 136463
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 136483
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 140581
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 140587
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 140597
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 140617
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 144715
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 144721
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 144731
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 144751
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 148849
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 148855
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 148865
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 148885
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 152983
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 152989
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 152999
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 153019
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 157117
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 157123
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 157133
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 157153
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 161251
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 161257
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 161267
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 161287
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 165385
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 165391
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 165401
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 165421
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 169519
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 169525
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 169535
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 169555
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 173653
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 173659
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 173669
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 173689
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 177787
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 177793
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 177803
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 177823
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 181921
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 181927
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 181937
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 181957
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 186055
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 186061
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 186071
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 186091
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 190189
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 190195
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 190205
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 190225
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 194323
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 194329
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 194339
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 194359
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 198457
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 198463
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 198473
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 198493
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 202591
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 202597
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 202607
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 202627
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 206725
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 206731
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 206741
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 206761
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 210859
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 210865
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 210875
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 210895
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 214993
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 214999
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 215009
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 215029
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 219127
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 219133
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 219143
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 219163
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 223261
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 223267
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 223277
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 223297
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 227395
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 227401
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 227411
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 227431
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 231529
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 231535
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 231545
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 231565
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 235663
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 235669
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 235679
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 235699
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
-Instruction sti has 3 arguments. HERE THEY ARE
-1 15 1 
-CYCLES = 239797
-Cycles_to_exec = 0
-INSTRUCT 11 executed
-PC before = 0
-Move = 7
-NEW INSTRUCT 6 read
-Cycles_to_exec = 6
-PC after = 7
+Arg for sti not valid
 Instruction and has 3 arguments. HERE THEY ARE
 1 0 1 
-CYCLES = 239803
-Cycles_to_exec = 0
-INSTRUCT 6 executed
-PC before = 7
-Move = 8
-NEW INSTRUCT 1 read
-Cycles_to_exec = 10
-PC after = 15
 Instruction live has 1 arguments. HERE THEY ARE
 1 
-CYCLES = 239813
-Cycles_to_exec = 0
-INSTRUCT 1 executed
-PC before = 15
-Move = 5
-NEW INSTRUCT 9 read
-Cycles_to_exec = 20
-PC after = 20
 Instruction zjmp has 1 arguments. HERE THEY ARE
 -5 
-CYCLES = 239833
-Cycles_to_exec = 0
-INSTRUCT 9 executed
-PC before = 20
-Move = 3
-NEW INSTRUCT 0 read
-Cycles_to_exec = 0
-PC after = 23
 Introducing contestants...
 Contestant 0, "zork", has won !
