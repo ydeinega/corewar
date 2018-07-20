@@ -42,18 +42,31 @@ void	run_processes(void)
 	}
 }
 
-void	exec_instruct(t_process *proc)
+static t_arg_type	*get_arg_type(t_process *proc)
 {
-	t_arg_type	*arg_type;
-	int			move;
-	int			*arg;
-	t_op		op;
+	t_arg_type		*arg_type;
 
 	arg_type = NULL;
-	arg = NULL;
-	op = op_tab[proc->opcode - 1];
 	if (op.codage)
 		arg_type = get_codage(proc, op.arg_num);
+	else
+	{
+		arg_type = ft_strnew(op.arg_num);
+		ft_memcpy(arg_type, op.arg, op.arg_num);
+	}
+	return (arg_type);
+}
+
+void	exec_instruct(t_process *proc)
+{
+	t_arg_type		*arg_type;
+	int				move;
+	unsigned int	*arg;
+	t_op			op;
+
+	op = op_tab[proc->opcode - 1];
+	arg_type = get_arg_type(proc);
+	arg = NULL;
 	if (!op.codage || (op.codage && codage_valid(arg_type, op.arg, op.arg_num)))
 	{
 		arg = extract_arg(op, proc->pc, arg_type);
@@ -62,19 +75,22 @@ void	exec_instruct(t_process *proc)
 			proc->lives_ctd++;
 		else
 			proc->cycles_not_live++;
-		//print_arg(arg, proc->opcode);//del
+		print_arg(arg, proc->opcode);//del
 		//ЗАПИСЬ В ВЕРБ
 		// if (g_game.v)
 		// 	verb_add_to_op(proc, arg_type, arg);
 		
 	}
-	move = get_move(proc, argument);
-	// print_info_before_exec(proc, move);//del
+	//there can be functions that change pc and I should not call move then
+	//zjmp, for instance
+	//other???
+	move = get_move(proc, arg_type);//here in move I should try to handle it
+	//print_info_before_exec(proc, move);//del
 	proc->opcode = 0;
 	read_next_instruct(proc, move);
-	// print_info_after_exec(proc);//del
-	free(arg_type);
-	free(arg);
+	//print_info_after_exec(proc);//del
+	arg_type ? free(arg_type) : 0;
+	arg ? free(arg) : 0;
 }
 
 void	read_next_instruct(t_process *proc, int move)

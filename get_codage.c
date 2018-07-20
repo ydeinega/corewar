@@ -47,10 +47,12 @@ bool	codage_valid(t_arg_type *arg_type, t_arg_type *ref, int arg_num)
 
 int		get_move(t_process *proc, t_arg_type *arg_type)
 {
+	t_op op;
 	int move;
 	int i;
 
-	move = 2;
+	op = op_tab[proc->opcode - 1];
+	move = op.codage ? 2 : 1;
 	i = 0;
 	if (arg_type)
 	{

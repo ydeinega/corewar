@@ -82,7 +82,7 @@ void	print_codage(int codage, t_arg_type *arg, int arg_num)
 	}
 }
 
-void	print_arg(int *argument, int opcode)
+void	print_arg(unsigned int *argument, int opcode)
 {
 	t_op op;
 	int arg_num;

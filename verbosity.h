@@ -45,6 +45,6 @@ void					verb_mode(int number_v);
 void					introduce_contestants(void);
 void					verb_add_pc_move(int pc_prev, int pc_new, int move, unsigned char *board);
 void					verb_add_death(int proc_num, int cycles_not_live);
-void					verb_add_op(t_process *proc, t_arg_type *arg_type, int *arg);
+//void					verb_add_op(t_process *proc, t_arg_type *arg_type, int *arg);
 
 #endif
