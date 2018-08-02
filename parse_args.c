@@ -78,7 +78,7 @@ void	parse_args(int argc, char **argv)
 			validate_visu(argc, argv, &i);
 		else if (ft_strequ(argv[i], "-v"))
 			validate_verbal(argc, argv, &i);
-		else if (ft_strequ(argv[i], "-n") || ft_strstr(argv[i], ".cor"))
+		else if (ft_strequ(argv[i], "-n") || ft_strstr(argv[i], ".cor"))//необязательно, чтоб было .cor
 		{
 			g_game.players == MAX_PLAYERS ? error(6) : 0;//op.h
 			validate_champ(argc, argv, &i);

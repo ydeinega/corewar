@@ -21,7 +21,7 @@ void			validate_champ(int argc, char **argv, int *i)
 	new = NULL;
 	if (ft_strequ(argv[*i], "-n"))
 		num = validate_champ_num(argc, argv, i);
-	if (ft_strstr(argv[*i], ".cor"))
+	if (ft_strstr(argv[*i], ".cor"))//здесь не обязательно кор расширение
 	{
 		new = num > 0 ? new_champ(argv[*i], num, true) :
 		new_champ(argv[*i], num, false);
@@ -44,9 +44,7 @@ int				validate_champ_num(int argc, char **argv, int *i)
 		error(2);
 	else if (*i + 2 >= argc)
 	{
-		if (ft_strstr(argv[*i + 1], ".cor"))
-			error(2);
-		else if (validate_num(argv[*i + 1]))
+		if (validate_num(argv[*i + 1]))
 			error(4);
 		else
 			error(2);

@@ -34,9 +34,14 @@ void	run_processes(void)
 				tmp->cycles_to_exec--;
 				if (tmp->cycles_to_exec == 0)
 					exec_instruct(tmp);
+				else
+					tmp->cycles_not_live++;
 			}
 			else
+			{
+				tmp->cycles_not_live++;
 				read_next_instruct(tmp, 1, MEM_SIZE);
+			}
 		}
 		tmp = tmp->next;
 	}
@@ -77,13 +82,16 @@ void	exec_instruct(t_process *proc)
 		if (arg_valid(arg_type, arg, op.arg_num))
 			g_command[proc->opcode - 1](proc, arg, arg_type);
 		if (proc->opcode == 1)
+		{
 			proc->lives_ctd++;
+			proc->cycles_not_live = 0;
+		}
 		else
 			proc->cycles_not_live++;
-		print_arg(arg, proc->opcode);//del
+		//print_arg(arg, proc->opcode);//del
 		//ЗАПИСЬ В ВЕРБ
-		// if (g_game.v)
-		// 	verb_add_to_op(proc, arg_type, arg);
+		if (g_game.v)//comment
+			verb_add_op(proc, arg_type, arg);
 		
 	}
 	//there can be functions that change pc and I should not call move then
@@ -127,7 +135,7 @@ void	read_next_instruct(t_process *proc, int move, int base)
 		proc->cycles_to_exec = op_tab[code - 1].cycles_to_exec;//здесь нужно смотреть в табличке
 	}
 	//ЗАПИСЬ В ВЕРБ
-	//if (g_game.v)
-		// verb_move_pc_move(pc_prev, proc->pc, move, g_game.board)
+	if (g_game.v)//comment
+		verb_add_pc_move(pc_prev, proc->pc, move, g_game.board);
 }
 

@@ -18,7 +18,7 @@
 # include <fcntl.h>
 # include "op.h"
 # include "./libft/libft.h"
-# include "verbosity.h"
+// # include "./verbosity/verbosity.h"
 # define HEX "0123456789abcdef"
 
 typedef struct			s_change
@@ -105,6 +105,8 @@ typedef	struct 			s_op
 	bool				carry;
 	int					label;
 }						t_op;
+
+# include "./verbosity/verbosity.h"
 
 typedef	void			(*funcptr)(t_process *process, unsigned int *arg, t_arg_type *arg_type);
 t_parse					g_game;

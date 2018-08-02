@@ -70,7 +70,7 @@ void			start_game(void)
 	g_game.player = create_players();
 	g_game.board = create_board(g_game.player);
 	g_game.proc = create_process(g_game.player);
-	print_proc(g_game.proc);//
+	//print_proc(g_game.proc);//
 	run_game();
 	
 	//dump();

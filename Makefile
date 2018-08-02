@@ -14,7 +14,23 @@ NAME = corewar
 
 LIB = ./libft/libft.a
 
-FLAGS = -Wall -Wextra -Werror -I. -c
+HEADERS = ./verbosity/verbosity.h \
+corewar.h \
+op.h
+
+FLAGS = -Wall -Wextra -Werror
+
+VERB_PATH = ./verbosity/
+
+VERB_SRCS = \
+verb_del.c \
+verb_deaths.c \
+verb_op.c \
+verb_pc_move.c \
+verb_print.c \
+verb_mode.c
+
+VERB = $(addprefix $(VERB_PATH), $(VERB_SRCS))
 
 SRCS = \
 main.c \
@@ -32,21 +48,22 @@ run_processes.c \
 instruction_1.c \
 instruction_2.c \
 instruction_3.c \
-verb_mode.c \
 instruct_info.c \
 get_codage.c \
 extract_arg.c \
 store_value.c \
-print_for_debug.c
+print_for_debug.c \
 
 
 OBJS = $(SRCS:.c=.o)
 
+VERB_OBJS = $(VERB_SRCS:.c=.o)
+
 cor:
 	@rm -rf $(NAME)
 	@make -C libft
-	@gcc $(SRCS) $(FLAGS)
-	@gcc $(OBJS) $(LIB) -o $(NAME)
+	@gcc $(SRCS) $(VERB) $(FLAGS) -I $(HEADERS) -c
+	@gcc $(OBJS) $(VERB_OBJS) $(LIB) -o $(NAME)
 	@echo "\x1b[35mYour PROGRAM has been successfully created!\x1b[0m"
 
 clean:

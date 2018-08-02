@@ -29,15 +29,6 @@ void	validate_verbal(int argc, char **argv, int *i)
 	num = 0;
 	if (*i + 1 == argc)
 		error(8);
-	else if (*i + 2 >= argc)
-	{
-		if (ft_strstr(argv[*i + 1], ".cor"))
-			error(8);
-		else if (validate_num(argv[*i + 1]))
-			error(4);
-		else
-			error(8);
-	}
 	else
 	{
 		*i += 1;

@@ -2,13 +2,13 @@
 
 void	run_game(void)
 {
-	// if (g_game.v)
-	// 	initialize_verb();
-	while (g_game.end != true || g_game.ctd > 0)
+	if (g_game.v)
+		initialize_verb();//comment
+	while (g_game.end != true && g_game.ctd > 0)
 	{
 		g_game.cycle++;
 		// if (g_game.v)
-		// 	start_verb(g_game.cycle, g_game.ctd);
+		// 	start_verb(g_game.cycle, g_game.ctd);//comment
 		g_game.ctd_cur++;
 		run_processes();
 		if (g_game.ctd_cur == g_game.ctd)
@@ -30,8 +30,8 @@ void	make_check(void)
 	{
 		g_game.ctd -= CYCLE_DELTA;
 		g_game.checks = 0;
-		// if (g_game.v)//Изменяю флаг, когда меняю CTD
-		// 	g_verb.ctd_change = 1;
+		if (g_game.v)//Изменяю флаг, когда меняю CTD//comment
+			g_verb.ctd_change = 1;
 	}
 	else
 		g_game.checks++;
@@ -39,8 +39,8 @@ void	make_check(void)
 	{
 		g_game.ctd -= CYCLE_DELTA; 
 		g_game.checks = 0;
-		// if (g_game.v)
-		// 	g_verb.ctd_change = 1;
+		if (g_game.v)//comment
+			g_verb.ctd_change = 1;
 	}
 	if (g_game.end || g_game.ctd <= 0)
 		g_game.end = true;
@@ -75,11 +75,14 @@ bool	check_deaths(void)
 	{
 		if (!proc->lives_ctd)
 		{
+			//ft_printf("proc_num = %i lives_ctd = %i\n", proc->num, proc->lives_ctd);
+			//ft_printf("cycles_not_live = %i ctd = %i\n", proc->cycles_not_live, g_game.ctd);
 			proc->live = 0;
 			num_deaths++;
-			// if (g_game.v)
-			// 	verb_add_death(proc->num, proc->cycles_not_live, g_game.ctd);
+			if (g_game.v)//comment
+				verb_add_death(proc->num, proc->cycles_not_live);
 		}
+		proc->lives_ctd = 0;
 		proc = proc->next;
 	}
 	return (num_deaths == g_game.proc_num ? 1 : 0);
